@@ -1,0 +1,55 @@
+body {
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 650px;
+  margin: 0 auto; /*top/bottom 0, left/right: centered*/
+  padding: 0 16px; /*16px between body and sides of browser window*/
+  
+  /*Make content and footer flow downward*/
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /*make body take up the whole screen*/
+}
+
+footer {
+  color: #888888;
+  border-top: 1px solid #eeeeee;
+  margin-top: 16px;
+  padding: 16px 0;
+}
+
+header{
+  margin-top: 16px;
+  margin-bottom: 48px;  
+}
+
+h1{ 
+  font-size: 64px;
+}
+
+header a {
+  color: #888888;
+  margin-right: 16px;
+  text-decoration: none;
+}
+
+.portrait {
+  width: 250px;
+}
+
+.main-content{
+  flex-grow: 1; /*Make main content take up all leftover space*/
+}
+
+input {
+  border: 1px solid #cccccc;
+  padding: 8px;
+}
+
+button {
+  cursor: pointer;
+  border: 1px solid #888888;
+  background: #888888;
+  color: white;
+  padding: 8px;
+}
