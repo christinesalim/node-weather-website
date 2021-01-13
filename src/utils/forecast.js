@@ -11,9 +11,13 @@ const forecast = (latitude, longitude, callback) => {
       callback("Unable to get weather data - API error")
     } else {
       if (body.current !== undefined){
-        const {weather_descriptions, temperature, feelslike} = body.current;
+        const {
+          weather_descriptions, 
+          temperature, 
+          feelslike,
+          humidity } = body.current;
         const data = "The temperature is " + temperature + 
-        " degrees and it feels like " + feelslike + " degrees. It is currently " + weather_descriptions[0].toLowerCase();
+        " degrees and it feels like " + feelslike + " degrees. It is currently " + weather_descriptions[0].toLowerCase() + ". The humidity is " + humidity + " percent.";
         callback(null,{weather:data});//null value for error
       } else {
         //Handle error when no error is present, but data is missing
