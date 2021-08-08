@@ -30,21 +30,21 @@ app.use(express.static(publicDirectoryPath));
 app.get('',(req,res) => {
   res.render('index', {
     title: 'Weather App',
-    name: 'Christine' }); //render the index page view
+    name: 'Christine S.' }); //render the index page view
 })
 
 app.get('/about',(req,res) => {
   res.render('about', {
     title: 'About me',
-    name: 'Christine'
+    name: 'Christine S.'
   }); //route for /about 
 })
 
 app.get('/help', (req,res) => { //route for /help
   res.render('help', {
     title: 'Help',
-    name: 'Christine',
-    msg: 'Useful help information'
+    name: 'Christine S.',
+    msg: 'Please enter a location to look up the weather for that place. For example, San Jose, CA.'
   });
 })
 
